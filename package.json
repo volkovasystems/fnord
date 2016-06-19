@@ -1,0 +1,29 @@
+{
+  "name": "fnord",
+  "version": "0.0.0",
+  "description": "Confuse the array making it randomize.",
+  "main": "fnord.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/volkovasystems/fnord.git"
+  },
+  "keywords": [
+    "array-random",
+    "random",
+    "shuffle",
+    "fnord"
+  ],
+  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/volkovasystems/fnord/issues"
+  },
+  "homepage": "https://github.com/volkovasystems/fnord#readme",
+  "dependencies": {
+    "plough": "0.0.0",
+    "raze": "0.0.4"
+  }
+}
