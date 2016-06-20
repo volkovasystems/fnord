@@ -84,7 +84,7 @@ var fnord = function fnord( list ){
 
 	var _list = raze( arguments );
 
-	_list = plough( arguments );
+	_list = plough( _list );
 
 	for( var index = _list.length - 1; index > 0; index-- ){
 		var randomIndex = Math.floor( Math.random( ) * ( index + 1 ) );
