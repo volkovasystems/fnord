@@ -1,6 +1,6 @@
 "use strict";
 
-/*:
+/*;
 	@module-license:
 		The MIT License (MIT)
 		@mit-license
@@ -42,7 +42,7 @@
 	@end-module-configuration
 
 	@module-documentation:
-
+		Confuse the array making it randomize.
 	@end-module-documentation
 
 	@index:
@@ -71,7 +71,7 @@ if( typeof window != "undefined" &&
 }
 
 var fnord = function fnord( list ){
-	/*:
+	/*;
 		@meta-configuration:
 			{
 				"list:required": [
@@ -82,21 +82,21 @@ var fnord = function fnord( list ){
 		@end-meta-configuration
 	*/
 
-	var _list = raze( arguments );
+	var array = raze( arguments );
 
-	_list = plough( _list );
+	array = plough( array );
 
-	for( var index = _list.length - 1; index > 0; index-- ){
+	for( var index = array.length - 1; index > 0; index-- ){
 		var randomIndex = Math.floor( Math.random( ) * ( index + 1 ) );
 
-		var temporary = _list[ index ];
+		var temporary = array[ index ];
 
-		_list[ index ] = _list[ randomIndex ];
+		array[ index ] = array[ randomIndex ];
 
-		_list[ randomIndex ] = temporary;
+		array[ randomIndex ] = temporary;
 	}
 
-	return _list;
+	return array;
 };
 
 

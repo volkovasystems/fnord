@@ -1,6 +1,6 @@
 {
   "name": "fnord",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Confuse the array making it randomize.",
   "main": "fnord.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/volkovasystems/fnord#readme",
   "dependencies": {
-    "plough": "0.0.0",
-    "raze": "0.0.4"
+    "plough": "0.0.3",
+    "raze": "0.0.8"
   }
 }
