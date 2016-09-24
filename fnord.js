@@ -45,12 +45,12 @@
 		Confuse the array making it randomize.
 	@end-module-documentation
 
-	@index:
+	@include:
 		{
 			"plough": "plough",
 			"raze": "raze"
 		}
-	@end-index
+	@end-include
 */
 
 if( typeof window == "undefined" ){
