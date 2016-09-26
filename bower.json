@@ -22,7 +22,6 @@
     "tests"
   ],
   "dependencies": {
-    "plough": "^0.0.3",
-    "raze": "^0.0.8"
+    "plough": "^0.0.4"
   }
 }

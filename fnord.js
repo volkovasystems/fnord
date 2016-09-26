@@ -47,27 +47,19 @@
 
 	@include:
 		{
-			"plough": "plough",
-			"raze": "raze"
+			"plough": "plough"
 		}
 	@end-include
 */
 
 if( typeof window == "undefined" ){
 	var plough = require( "plough" );
-	var raze = require( "raze" );
 }
 
 if( typeof window != "undefined" &&
 	!( "plough" in window ) )
 {
 	throw new Error( "plough is not defined" );
-}
-
-if( typeof window != "undefined" &&
-	!( "raze" in window ) )
-{
-	throw new Error( "raze is not defined" );
 }
 
 var fnord = function fnord( list ){
@@ -82,9 +74,7 @@ var fnord = function fnord( list ){
 		@end-meta-configuration
 	*/
 
-	var array = raze( arguments );
-
-	array = plough( array );
+	array = plough( arguments );
 
 	for( var index = array.length - 1; index > 0; index-- ){
 		var randomIndex = Math.floor( Math.random( ) * ( index + 1 ) );

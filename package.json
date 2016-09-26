@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/volkovasystems/fnord#readme",
   "dependencies": {
-    "plough": "0.0.3",
-    "raze": "0.0.8"
+    "plough": "0.0.4"
   }
 }
