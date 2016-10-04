@@ -42,7 +42,7 @@
 	@end-module-configuration
 
 	@module-documentation:
-		Confuse the array making it randomize.
+		Confuse the list making it randomize.
 	@end-module-documentation
 
 	@include:
@@ -74,19 +74,19 @@ var fnord = function fnord( list ){
 		@end-meta-configuration
 	*/
 
-	array = plough( arguments );
+	list = plough( arguments );
 
-	for( var index = array.length - 1; index > 0; index-- ){
+	for( var index = list.length - 1; index > 0; index-- ){
 		var randomIndex = Math.floor( Math.random( ) * ( index + 1 ) );
 
-		var temporary = array[ index ];
+		var temporary = list[ index ];
 
-		array[ index ] = array[ randomIndex ];
+		list[ index ] = list[ randomIndex ];
 
-		array[ randomIndex ] = temporary;
+		list[ randomIndex ] = temporary;
 	}
 
-	return array;
+	return list;
 };
 
 
