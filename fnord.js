@@ -76,10 +76,10 @@ var fnord = function fnord( list ){
 
 	list = plough( arguments );
 
-	for( var index = list.length - 1; index > 0; index-- ){
-		var randomIndex = Math.floor( Math.random( ) * ( index + 1 ) );
+	for( let index = list.length - 1; index > 0; index-- ){
+		let randomIndex = Math.floor( Math.random( ) * ( index + 1 ) );
 
-		var temporary = list[ index ];
+		let temporary = list[ index ];
 
 		list[ index ] = list[ randomIndex ];
 
