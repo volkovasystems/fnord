@@ -52,17 +52,9 @@
 	@end-include
 */
 
-if( typeof window == "undefined" ){
-	var plough = require( "plough" );
-}
+const plough = require( "plough" );
 
-if( typeof window != "undefined" &&
-	!( "plough" in window ) )
-{
-	throw new Error( "plough is not defined" );
-}
-
-var fnord = function fnord( list ){
+const fnord = function fnord( list ){
 	/*;
 		@meta-configuration:
 			{
@@ -89,7 +81,4 @@ var fnord = function fnord( list ){
 	return list;
 };
 
-
-if( typeof module != "undefined" ){
-	module.exports = fnord;
-}
+module.exports = fnord;
