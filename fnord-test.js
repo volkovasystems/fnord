@@ -1,3 +1,5 @@
+"use strict";
+
 const fnord = require( "./fnord.js" );
 
 console.log( fnord( [
