@@ -1,8 +1,9 @@
 {
   "name": "fnord",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Confuse the array making it randomize.",
   "main": "fnord.deploy.js",
+  "support": "fnord.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
     "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
@@ -23,6 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "plough": "^0.10.0"
+    "plough": "^0.11.0"
   }
 }
