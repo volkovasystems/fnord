@@ -1,13 +1,13 @@
 {
   "name": "fnord",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Confuse the array making it randomize.",
   "main": "fnord.js",
   "support": "fnord.support.js",
   "deploy": "fnord.deploy.js",
   "browser": "fnord.deploy.js",
   "scripts": {
-    "build": "babel fnord.js --out-file fnord.support.js --source-maps && webpack --progress",
+    "build": "babel fnord.js --out-file fnord.support.js --source-maps && webpack --progress --display-modules",
     "test": "mocha fnord-test.js"
   },
   "repository": {
@@ -31,7 +31,7 @@
   "homepage": "https://github.com/volkovasystems/fnord#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "plough": "^0.12.0"
+    "plough": "^0.14.0"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",

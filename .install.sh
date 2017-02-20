@@ -12,4 +12,5 @@ webpack \
 --dev && \
 bower install \
 plough \
---save
+--save \
+--force-latest
