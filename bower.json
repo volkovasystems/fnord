@@ -1,6 +1,6 @@
 {
   "name": "fnord",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Confuse the array making it randomize.",
   "main": "fnord.deploy.js",
   "support": "fnord.support.js",
@@ -24,6 +24,6 @@
     "tests"
   ],
   "dependencies": {
-    "plough": "^0.14.0"
+    "plough": "^0.15.0"
   }
 }
