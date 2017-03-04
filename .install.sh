@@ -1,5 +1,6 @@
 yarn add \
 babel-runtime \
+arkount \
 plough \
 --save && \
 yarn add \
@@ -11,6 +12,7 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
+arkount \
 plough \
 --save \
 --force-latest
