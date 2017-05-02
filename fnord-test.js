@@ -1,8 +1,9 @@
 "use strict";
 
+const assert = require( "assert" );
 const fnord = require( "./fnord.js" );
 
-console.log( fnord( [
+assert.ok( fnord( [
 			0x0aaa, 2, 0x0bbb, 0x0ccc, 0x0ddd,
 			0x0eee, 0x0fff, 0x0fad, 0x0bad, 0x0bed,
 			0x0fed, 0x0abe, 0xdead, 0xbeef, 0xdeaf,
@@ -10,5 +11,7 @@ console.log( fnord( [
 			0xaaaa, 0xbbbb, 0xcccc, 0xdddd, 0xffff
 ] ) );
 
-console.log( fnord( [ ] ) );
-console.log( fnord( ) );
+assert.ok( fnord( [ ] ) );
+assert.ok( fnord( ) );
+
+console.log( "ok" );
