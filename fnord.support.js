@@ -50,13 +50,11 @@
               
               	@include:
               		{
-              			"arkount": "arkount",
               			"plough": "plough"
               		}
               	@end-include
               */
 
-var arkount = require("arkount");
 var plough = require("plough");
 
 var fnord = function fnord(list) {
@@ -73,7 +71,7 @@ var fnord = function fnord(list) {
 
 	list = plough(arguments);
 
-	for (var index = arkount(list) - 1; index > 0; index--) {
+	for (var index = list.length - 1; index > 0; index--) {
 		var randomIndex = Math.floor(Math.random() * (index + 1));
 
 		var temporary = list[index];
