@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html>
+	<head>
+		<title>fnord unit test</title>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Fnord QUnit test</title>
-	<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
-	<script src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-	<script type="application/javascript" src="./fnord.deploy.js"></script>
-</head>
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
 
-<body>
-	<div id="qunit"></div>
-	<div id="qunit-fixture"></div>
-	<script>
-		QUnit.test( "equal test", function( assert ) {
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
 
-			assert.deepEqual( fnord( ), [ ], "should return empty array" );
+		<script type="application/javascript" src="./fnord.deploy.js"></script>
+	</head>
 
-			assert.deepEqual( fnord( [ ] ), [ ], "should return empty array" );
+	<body>
+		<div id="qunit"></div>
 
-			assert.ok( fnord( [ 1, 2, 3 ] ) );
+		<div id="qunit-fixture"></div>
 
-			assert.ok( fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] ) );
+		<script type="application/javascript">
+			QUnit.test( "fnord unit test", function( assert ) {
 
-			assert.equal( Array.isArray( fnord( [ 1, 2, 3 ] ) ), true, "should be true" );
-			
-		} );
-	</script>
-</body>
+				assert.deepEqual( fnord( ), [ ], "should return empty array" );
 
+				assert.ok( fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] ) );
+
+				assert.equal( Array.isArray( fnord( [ 1, 2, 3 ] ) ), true, "should be true" );
+				
+			} );
+		</script>
+	</body>
 </html>
