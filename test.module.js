@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"fnord": "fnord"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const fnord = require( "./fnord.js" );
@@ -67,27 +67,79 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "fnord", ( ) => {
 
-} );
+	describe( "`fnord( )`", ( ) => {
+		it( "should return empty array", ( ) => {
+			assert.deepEqual( fnord( ), [ ] );
+		} );
+	} );
 
+	describe( "`fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should confuse the list making it randomize", ( ) => {
+			assert.equal( fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] ).length, 6 );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "fnord", ( ) => {
 
-} );
+	describe( "`fnord( )`", ( ) => {
+		it( "should return empty array", ( ) => {
+			assert.deepEqual( fnord( ), [ ] );
+		} );
+	} );
 
+	describe( "`fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should confuse the list making it randomize", ( ) => {
+			assert.equal( fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] ).length, 6 );
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "fnord", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`fnord( )`", ( ) => {
+		it( "should return empty array", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return JSON.stringify( fnord( ) );
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.deepEqual( JSON.parse( result ), [ ] );
+		} );
+	} );
+
+	describe( "`fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should confuse the list making it randomize", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] ).length;
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, 6 );
+		} );
+	} );
+
+} );
 //: @end-bridge
