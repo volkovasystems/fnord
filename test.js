@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"fnord": "fnord"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const fnord = require( "./fnord.js" );
@@ -63,11 +63,21 @@ const fnord = require( "./fnord.js" );
 
 
 //: @server:
-
 describe( "fnord", ( ) => {
 
-} );
+	describe( "`fnord( )`", ( ) => {
+		it( "should return empty array", ( ) => {
+			assert.deepEqual( fnord( ), [ ] );
+		} );
+	} );
 
+	describe( "`fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )`", ( ) => {
+		it( "should confuse the list making it randomize", ( ) => {
+			assert.equal( fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] ).length, 6 );
+		} );
+	} );
+
+} );
 //: @end-server
 
 

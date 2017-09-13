@@ -1,16 +1,46 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-12T01:49:41.194Z",
-    "end": "2017-09-12T01:49:41.194Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 3,
+		"tests": 2,
+		"passes": 2,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-13T07:28:43.636Z",
+		"end": "2017-09-13T07:28:43.644Z",
+		"duration": 8
+	},
+	"tests": [
+		{
+			"title": "should return empty array",
+			"fullTitle": "fnord `fnord( )` should return empty array",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should confuse the list making it randomize",
+			"fullTitle": "fnord `fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )` should confuse the list making it randomize",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should return empty array",
+			"fullTitle": "fnord `fnord( )` should return empty array",
+			"duration": 3,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should confuse the list making it randomize",
+			"fullTitle": "fnord `fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )` should confuse the list making it randomize",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

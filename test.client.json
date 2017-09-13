@@ -1,0 +1,116 @@
+{
+	"state": {
+		"passed": 2,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-13T07:28:44.836Z",
+	"end": "2017-09-13T07:29:27.043Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "fnord",
+			"duration": 0,
+			"start": "2017-09-13T07:29:26.713Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "fnord",
+			"duration": 150,
+			"start": "2017-09-13T07:29:26.714Z",
+			"end": "2017-09-13T07:29:26.864Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-13T07:29:26.715Z",
+					"end": "2017-09-13T07:29:26.715Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "fnord",
+					"associatedTest": "should return empty array"
+				},
+				{
+					"start": "2017-09-13T07:29:26.809Z",
+					"end": "2017-09-13T07:29:26.810Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "fnord",
+					"associatedTest": "should return empty array"
+				},
+				{
+					"start": "2017-09-13T07:29:26.811Z",
+					"end": "2017-09-13T07:29:26.812Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "fnord",
+					"associatedTest": "should confuse the list making it randomize"
+				},
+				{
+					"start": "2017-09-13T07:29:26.864Z",
+					"end": "2017-09-13T07:29:26.864Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "fnord",
+					"associatedTest": "should confuse the list making it randomize"
+				},
+				{
+					"start": "2017-09-13T07:29:26.865Z",
+					"end": "2017-09-13T07:29:26.865Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "fnord"
+				}
+			]
+		},
+		{
+			"name": "`fnord( )`",
+			"duration": 96,
+			"start": "2017-09-13T07:29:26.714Z",
+			"end": "2017-09-13T07:29:26.810Z",
+			"tests": [
+				{
+					"name": "should return empty array",
+					"start": "2017-09-13T07:29:26.715Z",
+					"end": "2017-09-13T07:29:26.809Z",
+					"duration": 94,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`fnord( [ 1, 2, 3, [ 4, 5, 6 ] ] )`",
+			"duration": 53,
+			"start": "2017-09-13T07:29:26.811Z",
+			"end": "2017-09-13T07:29:26.864Z",
+			"tests": [
+				{
+					"name": "should confuse the list making it randomize",
+					"start": "2017-09-13T07:29:26.811Z",
+					"end": "2017-09-13T07:29:26.864Z",
+					"duration": 53,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
